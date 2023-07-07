@@ -26,6 +26,7 @@ export async function getChatResponse(messages: Message[], apiKey: string) {
   return { message: message };
 }
 
+// 流式请求 OpenAI
 export async function getChatResponseStream(
   messages: Message[],
   apiKey: string

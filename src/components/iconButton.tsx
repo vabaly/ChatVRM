@@ -6,6 +6,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   label?: string;
 };
 
+// 公共的按钮组件，提供加载中的状态（三个点）
 export const IconButton = ({
   iconName,
   isProcessing,

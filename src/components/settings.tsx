@@ -50,9 +50,9 @@ export const Settings = ({
       </div>
       <div className="max-h-full overflow-auto">
         <div className="text-text1 max-w-3xl mx-auto px-24 py-64 ">
-          <div className="my-24 typography-32 font-bold">設定</div>
+          <div className="my-24 typography-32 font-bold">设置</div>
           <div className="my-24">
-            <div className="my-16 typography-20 font-bold">OpenAI API キー</div>
+            <div className="my-16 typography-20 font-bold">OpenAI API 密钥</div>
             <input
               className="text-ellipsis px-16 py-8 w-col-span-2 bg-surface1 hover:bg-surface1-hover rounded-8"
               type="text"
@@ -61,35 +61,34 @@ export const Settings = ({
               onChange={onChangeAiKey}
             />
             <div>
-              APIキーは
+            API 密钥是
               <Link
                 url="https://platform.openai.com/account/api-keys"
-                label="OpenAIのサイト"
+                label="OpenAI密钥链接"
               />
-              で取得できます。取得したAPIキーをフォームに入力してください。
+              你可以通过在表单中输入获取的 API 密钥。
             </div>
             <div className="my-16">
-              入力されたAPIキーで、ブラウザから直接OpenAIのAPIを利用しますので、サーバー等には保存されません。
-              なお、利用しているモデルはGPT-3です。
+              输入的API密钥将直接从浏览器使用OpenAI API，因此不会保存在服务器等上。使用的模型是GPT-3。
               <br />
-              ※APIキーや会話文はピクシブのサーバーに送信されません。
+              *您的API密钥和对话文本不会发送到pixiv的服务器。
             </div>
           </div>
           <div className="my-40">
             <div className="my-16 typography-20 font-bold">
-              キャラクターモデル
+              人物模型
             </div>
             <div className="my-8">
-              <TextButton onClick={onClickOpenVrmFile}>VRMを開く</TextButton>
+              <TextButton onClick={onClickOpenVrmFile}>打开VRM</TextButton>
             </div>
           </div>
           <div className="my-40">
             <div className="my-8">
               <div className="my-16 typography-20 font-bold">
-                キャラクター設定（システムプロンプト）
+              人物设置（系统提示）
               </div>
               <TextButton onClick={onClickResetSystemPrompt}>
-                キャラクター設定リセット
+              重置角色设置
               </TextButton>
             </div>
 
@@ -100,9 +99,9 @@ export const Settings = ({
             ></textarea>
           </div>
           <div className="my-40">
-            <div className="my-16 typography-20 font-bold">声の調整</div>
+            <div className="my-16 typography-20 font-bold">声音调节</div>
             <div>
-              Koeiro APIを使用しています。詳しくは
+              我正在使用 Koeiro API。了解更多信息请参考：
               <a
                 className="text-primary hover:text-primary-hover"
                 target="_blank"
@@ -111,37 +110,36 @@ export const Settings = ({
               >
                 http://koeiromap.rinna.jp
               </a>
-              をご覧ください。
             </div>
-            <div className="mt-16">プリセット</div>
+            <div className="mt-16">预设</div>
             <div className="my-8 grid grid-cols-2 gap-[8px]">
               <TextButton
                 onClick={() =>
                   onChangeKoeiroParam(PRESET_A.speakerX, PRESET_A.speakerY)
                 }
               >
-                かわいい
+                可爱的
               </TextButton>
               <TextButton
                 onClick={() =>
                   onChangeKoeiroParam(PRESET_B.speakerX, PRESET_B.speakerY)
                 }
               >
-                元気
+                出色地
               </TextButton>
               <TextButton
                 onClick={() =>
                   onChangeKoeiroParam(PRESET_C.speakerX, PRESET_C.speakerY)
                 }
               >
-                かっこいい
+                凉爽的
               </TextButton>
               <TextButton
                 onClick={() =>
                   onChangeKoeiroParam(PRESET_D.speakerX, PRESET_D.speakerY)
                 }
               >
-                渋い
+                涩
               </TextButton>
             </div>
             <div className="my-24">
@@ -180,9 +178,9 @@ export const Settings = ({
           {chatLog.length > 0 && (
             <div className="my-40">
               <div className="my-8 grid-cols-2">
-                <div className="my-16 typography-20 font-bold">会話履歴</div>
+                <div className="my-16 typography-20 font-bold">对话历史</div>
                 <TextButton onClick={onClickResetChatLog}>
-                  会話履歴リセット
+                  对话历史重置
                 </TextButton>
               </div>
               <div className="my-8">
